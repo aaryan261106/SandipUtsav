@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap');
+
+@font-face {
+  font-family: 'CalfineDemo';
+  src: url('/fonts/CalfineDemo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CalfineDemo';
+  src: url('/fonts/CalfineDemo.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Festival Color Palette - Warm & Vibrant */
+    --background: 45 100% 97%;
+    --foreground: 215 55% 18%;
+
+    --card: 45 100% 95%;
+    --card-foreground: 215 55% 18%;
+
+    --popover: 45 100% 97%;
+    --popover-foreground: 215 55% 18%;
+
+    /* Coral/Orange Primary */
+    --primary: 14 83% 51%;
+    --primary-foreground: 45 100% 97%;
+
+    /* Teal Secondary */
+    --secondary: 215 55% 23%;
+    --secondary-foreground: 45 100% 97%;
+
+    /* Muted Cream */
+    --muted: 40 30% 90%;
+    --muted-foreground: 215 30% 40%;
+
+    /* Sunny Yellow Accent */
+    --accent: 32 89% 65%;
+    --accent-foreground: 215 55% 18%;
+
+    /* Festival Red */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 45 100% 97%;
+
+    --border: 32 40% 80%;
+    --input: 32 40% 85%;
+    --ring: 14 83% 51%;
+
+    --radius: 0.75rem;
+
+    /* Custom Festival Colors */
+    --festival-orange: 14 83% 51%;
+    --festival-red: 0 72% 51%;
+    --festival-yellow: 40 95% 55%;
+    --festival-teal: 180 45% 35%;
+    --festival-navy: 215 55% 18%;
+    --festival-cream: 45 100% 95%;
+    --festival-gold: 38 90% 50%;
+
+    /* Gradients */
+    --gradient-sunset: linear-gradient(135deg, hsl(14 83% 51%) 0%, hsl(40 95% 55%) 50%, hsl(0 72% 51%) 100%);
+    --gradient-ocean: linear-gradient(135deg, hsl(180 45% 35%) 0%, hsl(215 55% 23%) 100%);
+    --gradient-fire: linear-gradient(180deg, hsl(40 95% 55%) 0%, hsl(14 83% 51%) 50%, hsl(0 72% 51%) 100%);
+
+    /* Shadows */
+    --shadow-festival: 0 10px 40px -10px hsl(14 83% 51% / 0.4);
+    --shadow-card: 0 8px 30px -8px hsl(215 55% 18% / 0.15);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 45 100% 95%;
+
+    --card: 0 0% 5%;
+    --card-foreground: 45 100% 95%;
+
+    --popover: 0 0% 3%;
+    --popover-foreground: 45 100% 95%;
+
+    --primary: 14 83% 55%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 0 0% 8%;
+    --secondary-foreground: 45 100% 95%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 40 30% 70%;
+
+    --accent: 40 95% 55%;
+    --accent-foreground: 0 0% 0%;
+
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 45 100% 95%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 15%;
+    --ring: 14 83% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'CalfineDemo', 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'CalfineDemo', 'Bebas Neue', sans-serif;
+    letter-spacing: 0.02em;
+  }
+
+  p, .subtitle, .description {
+    font-style: italic;
+    font-family: 'CalfineDemo', 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .festival-gradient {
+    background: var(--gradient-sunset);
+  }
+
+  .festival-text-gradient {
+    background: var(--gradient-sunset);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .ocean-gradient {
+    background: var(--gradient-ocean);
+  }
+
+  .fire-gradient {
+    background: var(--gradient-fire);
+  }
+
+  .festival-shadow {
+    box-shadow: var(--shadow-festival);
+  }
+
+  .card-shadow {
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Retro Border Style */
+  .retro-border {
+    border: 4px solid hsl(var(--festival-navy));
+    box-shadow: 6px 6px 0px hsl(var(--festival-orange));
+  }
+
+  /* Animated underline */
+  .animated-underline {
+    position: relative;
+  }
+
+  .animated-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: hsl(var(--primary));
+    transition: width 0.3s ease;
+  }
+
+  .animated-underline:hover::after {
+    width: 100%;
+  }
+
+  /* Floating animation */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Pulse glow */
+  @keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px hsl(var(--festival-orange) / 0.5); }
+    50% { box-shadow: 0 0 40px hsl(var(--festival-orange) / 0.8); }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  /* Scroll reveal */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Timeline styles */
+  .timeline-dot {
+    @apply w-5 h-5 rounded-full bg-primary border-4 border-background;
+  }
+
+  .timeline-line {
+    @apply absolute top-0 left-1/2 -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary via-accent to-secondary;
+  }
+}
+
+@layer utilities {
+  .text-shadow-festival {
+    text-shadow: 3px 3px 0px hsl(var(--festival-navy)), 
+                 6px 6px 0px hsl(var(--festival-orange) / 0.3);
+  }
+
+  .text-shadow-light {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  }
+}
