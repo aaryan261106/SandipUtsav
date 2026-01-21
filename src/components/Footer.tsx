@@ -11,22 +11,22 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="flex items-center gap-4 mb-4">
-              <img 
-                src={sandipUniversityLogo} 
-                alt="Sandip University" 
+              <img
+                src={sandipUniversityLogo}
+                alt="Sandip University"
                 className="h-12 w-auto brightness-0 dark:brightness-100 invert dark:invert-0"
               />
-              <img 
-                src={eventClubLogo} 
-                alt="Event Club" 
+              <img
+                src={eventClubLogo}
+                alt="Event Club"
                 className="h-12 w-auto rounded-lg"
               />
             </div>
             <h3 className="font-display text-3xl text-foreground mb-4">
-              <span className="text-primary">Sandip</span> Utsav
+              <span className="text-primary">Sandip</span>Otsav
             </h3>
             <p className="text-muted-foreground mb-6 max-w-md">
-              The biggest cultural extravaganza celebrating art, music, dance, and creativity. 
+              The biggest cultural extravaganza celebrating art, music, dance, and creativity.
               Join us for four unforgettable days of fun and festivities.
             </p>
             {/* Social Links */}
@@ -85,7 +85,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-muted-foreground text-sm">
-            © 2026 Sandip Utsav | Event Club - By The Students, For The Students
+            © 2026 Sandip Otsav | Event Club - By The Students, For The Students
           </p>
           <div className="flex gap-6 text-sm text-muted-foreground">
             <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>

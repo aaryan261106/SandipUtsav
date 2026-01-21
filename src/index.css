@@ -16,6 +16,15 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'DXSitrus';
+  src: url('/fonts/DXSitrus-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -127,14 +136,14 @@
     font-family: 'CalfineDemo', 'Poppins', sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'CalfineDemo', 'Bebas Neue', sans-serif;
-    letter-spacing: 0.02em;
-  }
+  h1, h2, h3, h4 {
+  font-family: 'CalfineDemo', 'Bebas Neue', sans-serif;
+}
+
 
   p, .subtitle, .description {
     font-style: italic;
-    font-family: 'CalfineDemo', 'Poppins', sans-serif;
+     font-family: 'DXSitrus';
   }
 }
 

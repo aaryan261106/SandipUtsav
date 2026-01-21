@@ -75,10 +75,10 @@ const AboutSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           {[
-            { value: "10K+", label: "Participants" },
-            { value: "50+", label: "Events" },
+            { value: "8K+", label: "Participants" },
+            { value: "20+", label: "Events" },
             { value: "4", label: "Days" },
-            { value: "₹5L+", label: "Prize Pool" },
+            { value: "5", label: "Stages" },
           ].map((stat, index) => (
             <div
               key={index}

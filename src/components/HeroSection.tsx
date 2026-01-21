@@ -46,16 +46,31 @@ const HeroSection = () => {
       >
         {/* Text Logo with CalfineDemo Font */}
         <motion.h1
-          className="text-6xl md:text-8xl lg:text-[10rem] font-bold mb-6 text-center leading-none"
-          style={{ fontFamily: 'CalfineDemo, Bebas Neue, sans-serif' }}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <span className="festival-text-gradient drop-shadow-2xl text-shadow-festival">
-            SANDIPOTSAV
-          </span>
-        </motion.h1>
+  className="relative text-6xl md:text-8xl lg:text-[10rem] font-bold mb-6 text-center leading-none"
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8, ease: "easeOut" }}
+>
+  {/* Gradient Border */}
+  <span
+    className="absolute inset-0 festival-text-gradient text-transparent"
+    style={{
+      WebkitTextStroke: "6px transparent",
+      WebkitBackgroundClip: "text",
+      filter: "drop-shadow(4px 4px 0 hsl(var(--festival-orange)))",
+    }}
+  >
+    SANDIPOTSAV
+  </span>
+
+  {/* White Fill */}
+  <span
+    className="relative text-white"
+    style={{ fontFamily: "CalfineDemo, Bebas Neue, sans-serif" }}
+  >
+    SANDIPOTSAV
+  </span>
+</motion.h1>
 
         {/* Tagline */}
         <motion.p
