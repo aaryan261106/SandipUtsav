@@ -136,6 +136,7 @@
 @layer base {
   * {
     @apply border-border;
+    font-family:'Clash_Regular';
   }
 
   body {
@@ -260,4 +261,5 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
 }
+
 
