@@ -9,6 +9,14 @@
 }
 
 @font-face {
+  font-family: 'Clash_Regular';
+  src: url('/fonts/Clash_Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'CalfineDemo';
   src: url('/fonts/CalfineDemo.otf') format('opentype');
   font-weight: normal;
@@ -135,14 +143,14 @@
     font-family: 'CalfineDemo', 'Poppins', sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4 {
     font-family: 'CalfineDemo', 'Bebas Neue', sans-serif;
     letter-spacing: 0.02em;
   }
 
   p, .subtitle, .description {
     font-style: italic;
-    font-family: 'CalfineDemo', 'Poppins', sans-serif;
+    font-family: 'Clash_Regular', sans-serif;
   }
 }
 
@@ -252,3 +260,4 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
 }
+
